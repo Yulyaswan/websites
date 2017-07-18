@@ -1,0 +1,52 @@
+
+@mixin break($point) {
+  @if $point == large-special {
+    @media (min-width: 2000px) { @content; }
+  }
+  @if $point == large-special-second {
+    @media (min-width: 1681px) { @content; }
+  }
+  @else if $point == x-large {
+    @media (min-width: 1370px) { @content; }
+  }
+  @else if $point == large {
+    @media  only screen and (max-width: 1819px) { @content; }
+  }
+  @else if $point == above-mobile {
+    @media  only screen and (min-width: 768px) { @content; }
+  }  
+  @else if $point == large-two {
+    @media  only screen and (max-width: 1500px) { @content; }
+  }
+  @else if $point == desktop-special {
+    @media  only screen and (max-width: 1300px) { @content; }
+  }
+  @else if $point == desktop {
+    @media  only screen and (max-width: 1199px) { @content; }
+  }  
+  @else if $point == medium {
+    @media only screen  and (max-width: 991px) { @content; }
+  }
+  @else if $point == big-small {
+    @media  only screen and (max-width: 820px)  { @content; }
+  }
+  @else if $point == small {
+    @media  only screen and (max-width: 767px)  { @content; }
+  }
+  @else if $point == ss-small {
+    @media  only screen and (max-width: 655px)  { @content; }
+  }
+  @else if $point == s-small {
+    @media  only screen and (max-width: 600px)  { @content; }
+  }
+  @else if $point == x-small {
+    @media  only screen and (max-width: 479px)  { @content; }
+  }
+  @else if $point == super-small {
+    @media  only screen and (max-width: 360px)  { @content; }
+  }
+
+  @if $point == small-height {
+    @media only screen and (max-width:767px), only screen and (max-height: 740px) { @content; }
+  }
+}
